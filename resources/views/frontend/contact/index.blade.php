@@ -13,7 +13,7 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><span>»</span></li>
-                    <li><a href="contact_us">Contact us</a></li>
+                    <li><a href="contact">Contact us</a></li>
                 </ul>
             </div>
         </div>
@@ -21,7 +21,7 @@
 
 
     <!-- Contact Us Section Start -->
-    <section class="contact_page_section">
+    <section class="contact_page_section mb-4">
         <div class="container">
             <div class="contact_inner">
                 <div class="contact_form">
@@ -35,7 +35,7 @@
                             <input type="text" placeholder="Name" name="name" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email" name="email" class="form-control">
+                            <input type="phone" placeholder="Phone" name="phone" class="form-control">
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" name="message" placeholder="Your message"></textarea>
@@ -47,7 +47,8 @@
                     </form>
                 </div>
                 <div class="contact_info">
-                    <div class="icon"><img src="{{ asset('frontend/images/contact_message_icon.png') }}" alt="image">
+                    <div class="icon" style="margin-top: 45px"><img
+                            src="{{ asset('frontend/images/contact_message_icon.png') }}" alt="image">
                     </div>
                     <div class="section_title">
                         <h2>Have any <span>question?</span></h2>
@@ -58,30 +59,24 @@
                     <ul class="contact_info_list">
                         <li>
                             <div class="img">
-                                <img src="{{ asset('frontend/images/mail_icon.png') }}" alt="image">
+                                <img src="{{ asset('frontend/images/contact/ig.png') }}" alt="image">
                             </div>
                             <div class="text">
-                                <span>Email Us</span>
-                                <a href="mailto:{{ config('global.email') }}">{{ config('global.email') }}</a>
+
+                                <a href="{{ $contact['insta_link'] }}"><span>Explore
+                                        Us</span>{{ $contact['insta_link'] }}</a>
                             </div>
                         </li>
                         <li>
                             <div class="img">
-                                <img src="{{ asset('frontend/images/call_icon.png') }}" alt="image">
+                                <img src="{{ asset('frontend/images/contact/yt.png') }}" alt="image">
                             </div>
                             <div class="text">
-                                <span>Call Us</span>
-                                <a href="tel:{{ config('global.contact_no') }}">{{ config('global.contact_no') }}</a>
+
+                                <a href="{{ $contact['yt_link'] }}"><span>Watch Us</span>{{ $contact['yt_link'] }}</a>
                             </div>
                         </li>
                         <li>
-                            <div class="img">
-                                <img src="{{ asset('frontend/images/location_icon.png') }}" alt="image">
-                            </div>
-                            <div class="text">
-                                <span>Visit Us</span>
-                                <p>{{ config('global.company_address') }}</p>
-                            </div>
                         </li>
                     </ul>
                 </div>
@@ -89,18 +84,4 @@
         </div>
     </section>
     <!-- Contact Us Section End -->
-
-
-    <!-- Map Section Start -->
-    <section class="row_am map_section">
-        <div class="container">
-            <div class="map_inner">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799160891!2d-74.25987584510595!3d40.69767006338158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1664399300741!5m2!1sen!2sin"
-                    width="100%" height="510" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-    <!-- Map Section End -->
 @endsection

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us</title>
+    <title>{{ $tags['title'] }}</title>
 
     <!-- icofont-css-link -->
     <link rel="stylesheet" href="{{ asset('frontend/css/icofont.min.css') }}">
@@ -22,7 +22,7 @@
     <!-- Responsive-Style-link -->
     <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('frontend/images/favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('frontend/images/nav/logof.png') }}" type="image/x-icon">
 
 </head>
 
@@ -42,8 +42,8 @@
             <div class="container">
                 <!-- navigation bar -->
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="#">
-                        <img src="{{ asset('frontend/images/nav/logo3.png') }}" alt="image">
+                    <a class="navbar-brand" href="/">
+                        <img src="{{ asset('frontend/images/nav/logo_side.png') }}"  alt="image">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -63,22 +63,13 @@
                                 <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="faq">FAQ</a>
+                                <a class="nav-link" href="privacy">Privacy Policy</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact">Contact</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Privacy Policy</a>
+                                <a class="nav-link" href="terms">Terms & Conditions</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Terms & Conditions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link dark_btn" href="#">
-
-                                    DOWNLOAD THE APP</a>
+                                <a class="nav-link dark_btn" href="contact">CONTACT US</a>
                             </li>
                         </ul>
                         <!-- secondery menu end -->
@@ -113,12 +104,9 @@
                         <!-- footer link 1 -->
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="abt_side">
-                                <div class="logo"> <img src="{{ asset('frontend/images/nav/logo3.png') }}"
+                                <div class="logo"> <img src="{{ asset('frontend/images/nav/logo_side.png') }}"
                                         alt="image"></div>
-                                <ul>
-                                    <li><a href="#">support@example.com</a></li>
-                                    <li><a href="#">+1-900-123 4567</a></li>
-                                </ul>
+                                
                                 <ul class="social_media">
                                     <li><a href="#"><i class="icofont-facebook"></i></a></li>
                                     <li><a href="#"><i class="icofont-twitter"></i></a></li>
@@ -133,11 +121,12 @@
                             <div class="links">
                                 <h3>Useful Links</h3>
                                 <ul>
-                                    <li><a href="#">Home</a></li>
+                                    <li><a href="/">Home</a></li>
                                     {{-- <li><a href="#">About us</a></li>
-                          <li><a href="#">Services</a></li>
-                          <li><a href="#">Blog</a></li> --}}
-                                    <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Blog</a></li> --}}
+                                    <li><a href="terms">Terms & conditions</a></li>
+                                    <li><a href="privacy">Privacy policy</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -147,11 +136,10 @@
                             <div class="links">
                                 <h3>Help & Suport</h3>
                                 <ul>
-                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="faq">FAQ's</a></li>
                                     {{-- <li><a href="#">Support</a></li>
-                          <li><a href="#">How it works</a></li> --}}
-                                    <li><a href="#">Terms & conditions</a></li>
-                                    <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">How it works</a></li> --}}
+                                    <li><a href="contact">Contact us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -189,12 +177,11 @@
                     <!-- row start -->
                     <div class="row">
                         <div class="col-md-6">
-                            <p>© Copyrights 2022. All rights reserved.</p>
+                            <p>© Copyrights 2024. All rights reserved.</p>
                         </div>
                         <div class="col-md-6">
                             <p class="developer_text">Design & developed by <a
-                                    href="https://themeforest.net/user/kalanidhithemes" target="blank">Kalanidhi
-                                    Themes</a></p>
+                                    href="https://www.mypcot.com/" target="blank">Mypcot Infotech Pvt Ltd</a></p>
                         </div>
                     </div>
                     <!-- row end -->

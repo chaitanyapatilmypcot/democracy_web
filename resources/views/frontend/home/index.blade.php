@@ -24,20 +24,21 @@
                         <!-- h1 -->
                         <h1>Explore <span>Your Passion for Cinema.</span></h1>
                         <!-- p -->
-                        <p>Are you a true cinephile? Do you pride yourself on your knowledge of movies and films? Look no further! Seeta Films presents an immersive experience designed just for you.
+                        <p>Are you a true cinephile? Do you pride yourself on your knowledge of movies and films? Look no
+                            further! Seeta Films presents an immersive experience designed just for you.
                         </p>
                     </div>
                     <!-- app buttons -->
                     <ul class="app_btn">
                         <li>
-                            <a href="#">
+                            <a href="{{config('global.app_link')}}">
                                 <img class="blue_img" src="{{ asset('frontend/images/appstore_blue.png') }}" alt="image">
                                 <img class="white_img" src="{{ asset('frontend/images/appstore_white.png') }}"
                                     alt="image">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="{{config('global.ios_link')}}">
                                 <img class="blue_img" src="{{ asset('frontend/images/googleplay_blue.png') }}"
                                     alt="image">
                                 <img class="white_img" src="{{ asset('frontend/images/googleplay_white.png') }}"
@@ -75,22 +76,26 @@
                             </div>
                             <div class="item">
                                 <div class="slider_img">
-                                    <img src="{{ asset('frontend/images/home/quiz_screen1.png') }}" class="py-1" alt="image">
+                                    <img src="{{ asset('frontend/images/home/quiz_screen1.png') }}" class="py-1"
+                                        alt="image">
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="slider_img">
-                                    <img src="{{ asset('frontend/images/home/quiz_complete1.png') }}" class="py-1" alt="image">
+                                    <img src="{{ asset('frontend/images/home/quiz_complete1.png') }}" class="py-1"
+                                        alt="image">
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="slider_img">
-                                    <img src="{{ asset('frontend/images/home/quiz_interactive1.png') }}" class="py-1" alt="image">
+                                    <img src="{{ asset('frontend/images/home/quiz_interactive1.png') }}" class="py-1"
+                                        alt="image">
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="slider_img">
-                                    <img src="{{ asset('frontend/images/home/rewards1.png') }}" class="py-1" alt="image">
+                                    <img src="{{ asset('frontend/images/home/rewards1.png') }}" class="py-1"
+                                        alt="image">
                                 </div>
                             </div>
                         </div>
@@ -107,70 +112,6 @@
         <!-- container end -->
     </section>
     <!-- Banner-Section-end -->
-
-    <!-- Trusted Section start -->
-    <section class="row_am trusted_section">
-        <!-- container start -->
-        <div class="container">
-            <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-                <!-- h2 -->
-                <h2>Trusted by <span>100+</span> clients</h2>
-                <!-- p -->
-                <p>With a proven track record and a reputation for excellence, we've proudly served over 150 clients across various industries.</p>
-            </div>
-
-            <!-- logos slider start -->
-            <div class="company_logos">
-                <div id="company_slider" class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="logo">
-                            <img src="{{ asset('frontend/images/paypal.png') }}" alt="image">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="logo">
-                            <img src="{{ asset('frontend/images/spoty.png') }}" alt="image">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="logo">
-                            <img src="{{ asset('frontend/images/shopboat.png') }}" alt="image">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="logo">
-                            <img src="{{ asset('frontend/images/slack.png') }}" alt="image">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="logo">
-                            <img src="{{ asset('frontend/images/envato.png') }}" alt="image">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="logo">
-                            <img src="{{ asset('frontend/images/paypal.png') }}" alt="image">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="logo">
-                            <img src="{{ asset('frontend/images/spoty.png') }}" alt="image">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="logo">
-                            <img src="{{ asset('frontend/images/shopboat.png') }}" alt="image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- logos slider end -->
-        </div>
-        <!-- container end -->
-    </section>
-    <!-- Trusted Section ends -->
-
-
     <!-- Features-Section-Start -->
     <section class="row_am features_section" id="features">
         <!-- container start -->
@@ -179,7 +120,8 @@
                 <!-- h2 -->
                 <h2><span>Features</span> that makes app different!</h2>
                 <!-- p -->
-                <p>At Seeta Films, we've crafted a movie and film quiz app that stands out from the crowd. Here's why users love us:</p>
+                <p>At Seeta Films, we've crafted a movie and film quiz app that stands out from the crowd. Here's why users
+                    love us:</p>
             </div>
             <div class="feature_detail">
                 <!-- feature box left -->
@@ -192,7 +134,8 @@
                         </div>
                         <div class="text">
                             <h4>Multiplayer Thrills</h4>
-                            <p>Engage in real-time multiplayer quizzes, adding excitement and social interaction to your movie trivia adventures.</p>
+                            <p>Engage in real-time multiplayer quizzes, adding excitement and social interaction to your
+                                movie trivia adventures.</p>
                         </div>
                     </div>
 
@@ -203,7 +146,8 @@
                         </div>
                         <div class="text">
                             <h4>Diverse Quiz Categories</h4>
-                            <p>Explore a variety of topics, from classics to current releases, catering to every movie enthusiast's interests.</p>
+                            <p>Explore a variety of topics, from classics to current releases, catering to every movie
+                                enthusiast's interests.</p>
                         </div>
                     </div>
                 </div>
@@ -218,7 +162,8 @@
                         </div>
                         <div class="text">
                             <h4>Compete Globally</h4>
-                            <p>Test your knowledge on global leaderboards, challenging friends and users worldwide for ultimate bragging rights.</p>
+                            <p>Test your knowledge on global leaderboards, challenging friends and users worldwide for
+                                ultimate bragging rights.</p>
                         </div>
                     </div>
 
@@ -229,7 +174,8 @@
                         </div>
                         <div class="text">
                             <h4>Personalized Recommendations</h4>
-                            <p>Receive tailored movie suggestions based on quiz performance, ensuring a curated viewing experience.</p>
+                            <p>Receive tailored movie suggestions based on quiz performance, ensuring a curated viewing
+                                experience.</p>
                         </div>
                     </div>
 
@@ -275,7 +221,9 @@
 
                             <!-- p -->
                             <p>
-                                Join over 7 lakhs users worldwide who have embraced our app as their go-to destination for all things movies. With a massive community of over 10 lakhs followers, our platform is where film enthusiasts unite.
+                                Join over 7 lakhs users worldwide who have embraced our app as their go-to destination for
+                                all things movies. With a massive community of over 10 lakhs followers, our platform is
+                                where film enthusiasts unite.
                             </p>
                         </div>
 
@@ -286,7 +234,7 @@
                                     <img src="{{ asset('frontend/images/download.png') }}" alt="image">
                                 </div>
                                 <div class="text">
-                                    <p><span class="counter-value" data-count="17">0</span><span>M+</span></p>
+                                    <p><span class="counter-value" data-count="10">0</span><span>T+</span></p>
                                     <p>Download</p>
                                 </div>
                             </li>
@@ -295,7 +243,7 @@
                                     <img src="{{ asset('frontend/images/followers.png') }}" alt="image">
                                 </div>
                                 <div class="text">
-                                    <p><span class="counter-value" data-count="08">0 </span><span>M+</span></p>
+                                    <p><span class="counter-value" data-count="08">0 </span><span>k+</span></p>
                                     <p>Followers</p>
                                 </div>
                             </li>
@@ -304,7 +252,7 @@
                                     <img src="{{ asset('frontend/images/reviews.png') }}" alt="image">
                                 </div>
                                 <div class="text">
-                                    <p><span class="counter-value" data-count="2300">1500</span><span>+</span></p>
+                                    <p><span class="counter-value" data-count="600">100</span><span>+</span></p>
                                     <p>Reviews</p>
                                 </div>
                             </li>
@@ -319,8 +267,8 @@
                             </li>
                         </ul>
                         <!-- UL end -->
-                        <a href="contact" class="btn puprple_btn" data-aos="fade-in" data-aos-duration="1500">START
-                            FREE TRIAL</a>
+                        <a href="{{config('global.app_link')}}
+                        " class="btn puprple_btn" data-aos="fade-in" data-aos-duration="1500">DOWNLOAD NOW</a>
                     </div>
                 </div>
             </div>
@@ -399,107 +347,6 @@
     </section>
     <!-- How-It-Workes-Section-end -->
 
-    <!-- Testimonial-Section start -->
-    <section class="row_am testimonial_section">
-        <!-- container start -->
-        <div class="container">
-            <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-                <!-- h2 -->
-                <h2>What our <span>customer say</span></h2>
-                <!-- p -->
-                <p>Join the chorus of satisfied customers who have experienced the magic of our app firsthand.</p>
-            </div>
-            <div class="testimonial_block" data-aos="fade-in" data-aos-duration="1500">
-                <div id="testimonial_slider" class="owl-carousel owl-theme">
-                    <!-- user 1 -->
-                    <div class="item">
-                        <div class="testimonial_slide_box">
-                            <div class="rating">
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                            </div>
-                            <p class="review">
-                                “ Absolutely love this app! It's incredibly user-friendly and has helped me discover so many amazing movies I wouldn't have found otherwise. ”
-                            </p>
-                            <div class="testimonial_img">
-                                <img src="{{ asset('frontend/images/testimonial_user1.png') }}" alt="image">
-                            </div>
-                            <h3>Shayna John</h3>
-                            <span class="designation">Careative inc</span>
-                        </div>
-                    </div>
-
-                    <!-- user 2 -->
-                    <div class="item">
-                        <div class="testimonial_slide_box">
-                            <div class="rating">
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                            </div>
-                            <p class="review">
-                                “ Being able to compete with friends on quizzes adds a fun and competitive element to my movie nights. Highly recommend! ”
-                            </p>
-                            <div class="testimonial_img">
-                                <img src="{{ asset('frontend/images/testimonial_user2.png') }}" alt="image">
-                            </div>
-                            <h3>Willium Den</h3>
-                            <span class="designation">Careative inc</span>
-                        </div>
-                    </div>
-
-                    <!-- user 3 -->
-                    <div class="item">
-                        <div class="testimonial_slide_box">
-                            <div class="rating">
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                                <span><i class="icofont-star"></i></span>
-                            </div>
-                            <p class="review">
-                                “ I've tried other movie quiz apps before, but none come close to the quality and variety that this one offers. It's become a daily ritual for me! ”
-                            </p>
-                            <div class="testimonial_img">
-                                <img src="{{ asset('frontend/images/testimonial_user3.png') }}" alt="image">
-                            </div>
-                            <h3>Cyrus Stephen</h3>
-                            <span class="designation">Careative inc</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- total review -->
-                <div class="total_review">
-                    <div class="rating">
-                        <span><i class="icofont-star"></i></span>
-                        <span><i class="icofont-star"></i></span>
-                        <span><i class="icofont-star"></i></span>
-                        <span><i class="icofont-star"></i></span>
-                        <span><i class="icofont-star"></i></span>
-                        <p>5.0 / 5.0</p>
-                    </div>
-                    <h3>257</h3>
-                    <a >TOTAL USER REVIEWS </a>
-                </div>
-
-                <!-- avtar faces -->
-                <div class="avtar_faces">
-                    <img src="{{ asset('frontend/images/avtar_testimonial.png') }}" alt="image">
-                </div>
-            </div>
-        </div>
-        <!-- container end -->
-    </section>
-    <!-- Testimonial-Section end -->
-
     <!-- FAQ-Section start -->
     <section class="row_am faq_section">
         <!-- container start -->
@@ -508,69 +355,30 @@
                 <!-- h2 -->
                 <h2><span>FAQ</span> - Frequently Asked Questions</h2>
                 <!-- p -->
-                <p>For more information or specific inquiries, please don't hesitate to reach out to our customer support team.</p>
+                <p>For more information or specific inquiries, please don't hesitate to reach out to our customer support
+                    team.</p>
             </div>
             <!-- faq data -->
             <div class="faq_panel">
                 <div class="accordion" id="accordionExample">
-                    <div class="card" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button type="button" class="btn btn-link active" data-toggle="collapse"
-                                    data-target="#collapseOne">
-                                    <i class="icon_faq icofont-plus"></i></i> Can I use one account across multiple devices?</button>
-                            </h2>
-                        </div>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <p>It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+                    @foreach ($faqContent as $item)
+                        <div class="card" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="card-header" id="heading{{ $item['id']}}">
+                                <h2 class="mb-0">
+                                    <button type="button" class="btn btn-link active" data-toggle="collapse"
+                                        data-target="#collapse{{ $item['id']}}">
+                                        <i class="icon_faq icofont-plus"></i></i> {{$item['question']}}</button>
+                                </h2>
+                            </div>
+                            <div id="collapse{{ $item['id']}}" class="collapse show" aria-labelledby="heading{{ $item['id']}}"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>{{ $item['answer'] }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseTwo"><i class="icon_faq icofont-plus"></i></i> How to
-                                    setup account ?</button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <p>Setting up your account is quick and easy - simply download the app, sign up with your email, and start exploring!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseThree"><i class="icon_faq icofont-plus"></i></i>How do I contact customer support?</button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <p>You can contact our customer support team by emailing <a href="#">support@seetafilms.com</a>.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="card-header" id="headingFour">
-                            <h2 class="mb-0">
-                                <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseFour"><i class="icon_faq icofont-plus"></i></i>Are there any age restrictions for using the app?</button>
-                            </h2>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <p>The app is suitable for users of all ages. However, parental guidance is recommended for younger audiences.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -596,34 +404,35 @@
                 <div id="screen_slider" class="owl-carousel owl-theme">
                     <div class="item">
                         <div class="screen_frame_img">
-                            <img src="{{ asset('frontend/images/home/Home1.png') }}" alt="image">
+                            <img src="{{ asset('frontend/images/home/carousel/1.png') }}" alt="image">
                         </div>
                     </div>
                     <div class="item">
                         <div class="screen_frame_img">
-                            <img src="{{ asset('frontend/images/home/quiz_screen1.png') }}" alt="image">
+                            <img src="{{ asset('frontend/images/home/carousel/2.png') }}" alt="image">
                         </div>
                     </div>
                     <div class="item">
                         <div class="screen_frame_img">
-                            <img src="{{ asset('frontend/images/home/quiz_interactive1.png') }}" alt="image">
+                            <img src="{{ asset('frontend/images/home/carousel/3.png') }}" alt="image">
                         </div>
                     </div>
                     <div class="item">
                         <div class="screen_frame_img">
-                            <img src="{{ asset('frontend/images/home/details.png') }}" alt="image">
+                            <img src="{{ asset('frontend/images/home/carousel/4.png') }}" alt="image">
                         </div>
                     </div>
                     <div class="item">
                         <div class="screen_frame_img">
-                            <img src="{{ asset('frontend/images/home/rewards1.png') }}" alt="image">
+                            <img src="{{ asset('frontend/images/home/carousel/5.png') }}" alt="image">
                         </div>
                     </div>
                     <div class="item">
                         <div class="screen_frame_img">
-                            <img src="{{ asset('frontend/images/home/contest.png') }}" alt="image">
+                            <img src="{{ asset('frontend/images/home/carousel/6.png') }}" alt="image">
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <!-- screen slider end -->
@@ -656,18 +465,16 @@
                         <div class="free_text">
                             <div class="section_title">
                                 <h2>Let’s download free from apple and play store</h2>
-                                <p>Instant free download from apple and play store orem Ipsum is simply dummy text
-                                    of the printing.
-                                    and typese tting indus orem Ipsum has beenthe standard</p>
+                                <p>Unlock the magic of cinema - Download now and embark on an unforgettable journey!</p>
                             </div>
                             <ul class="app_btn">
                                 <li>
-                                    <a href="#">
+                                    <a href="{{config('global.app_link')}}">
                                         <img src="{{ asset('frontend/images/appstore_blue.png') }}" alt="image">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="{{config('global.ios_link')}}">
                                         <img src="{{ asset('frontend/images/googleplay_blue.png') }}" alt="image">
                                     </a>
                                 </li>
@@ -678,8 +485,9 @@
                     <!-- images -->
                     <div class="col-md-6">
                         <div class="free_img">
-                            <img src="{{ asset('frontend/images/download-screen01.png') }}" alt="image">
-                            <img class="mobile_mockup" src="images/download-screen02.png" alt="image">
+                            <img src="{{ asset('frontend/images/home/carousel/Reward.png') }}" alt="image">
+                            <img class="mobile_mockup" src="{{ asset('frontend/images/home/carousel/Home.png') }}"
+                                alt="image">
                         </div>
                     </div>
                 </div>

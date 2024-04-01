@@ -1,4 +1,4 @@
-@extends('frontend/layouts/app')
+@extends('frontend/layouts/navl')
 @section('content')
     <!-- BredCrumb-Section -->
     <div class="bred_crumb blog_detail_bredcrumb" style="background:#fbfaff;">

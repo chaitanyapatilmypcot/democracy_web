@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Http;
 class PrivacyController extends Controller
 {
 
-    public function fetchAndDisplayPrivacy(Request $request)
+    public function fetchPrivacy(Request $request)
     {
 
         $uuid = '134657985';
@@ -18,7 +18,7 @@ class PrivacyController extends Controller
                 'UUID' => $uuid,
                 'Platform' => $platform
             ])
-            ->post('https://skyonliners.com/demo/democracy-apis/webservices/v1/policies', [
+            ->post('http://skyonliners.com/demo/democracy-apis/webservices/v1/policies', [
                 'type' => 'policy'
             ])
             ->json();

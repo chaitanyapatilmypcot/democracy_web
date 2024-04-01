@@ -8,16 +8,16 @@ use Illuminate\Support\Facades\Http;
 class TermsController extends Controller
 {
 
-    public function fetchAndDisplayTerms(Request $request)
+    public function fetchTerms(Request $request)
     {
-        $uuid = '134657985';
+        $uuid = '123456789';
         $platform = 'web';
         $response = Http::withBasicAuth('admin', 'mypcot')
             ->withHeaders([
                 'UUID' => $uuid,
                 'Platform' => $platform
             ])
-            ->post('https://skyonliners.com/demo/democracy-apis/webservices/v1/policies', [
+            ->post('http://skyonliners.com/demo/democracy-apis/webservices/v1/policies', [
                 'type' => 'terms'
             ])
             ->json();
