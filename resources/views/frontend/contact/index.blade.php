@@ -1,13 +1,10 @@
 @extends('frontend/layouts/navd')
 @section('content')
-    <!-- BredCrumb-Section -->
     <div class="bred_crumb">
         <div class="container">
             <!-- shape animation  -->
-            <span class="banner_shape1"> <img src="{{ asset('frontend/images/banner-shape1.png') }}" alt="image">
-            </span>
-            <span class="banner_shape2"> <img src="{{ asset('frontend/images/banner-shape2.png') }}" alt="image">
-            </span>
+            <span class="banner_shape1"> <img src="{{ asset('frontend/images/banner-shape1.png') }}" alt="image"> </span>
+            <span class="banner_shape2"> <img src="{{ asset('frontend/images/banner-shape2.png') }}" alt="image"> </span>
             <span class="banner_shape3"> <img src="{{ asset('frontend/images/banner-shape3.png') }}" alt="image"> </span>
 
             <div class="bred_text">
@@ -16,7 +13,7 @@
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><span>»</span></li>
-                    <li><a href="contact">Contact us</a></li>
+                    <li><a href="contact_us">Contact us</a></li>
                 </ul>
             </div>
         </div>
@@ -32,37 +29,20 @@
                         <h2>Leave a <span>message</span></h2>
                         <p>Fill up form below, our team will get back soon</p>
                     </div>
-                    <form action="#">
+                    <form action="{{ route('contact') }}" method="post" id="contactForm">
+                        @csrf
                         <div class="form-group">
-                            <input type="text" placeholder="Name" class="form-control">
+                            <input type="text" placeholder="Name" name="name" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email" class="form-control">
+                            <input type="email" placeholder="Email" name="email" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Company Name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control">
-                                <option value="">Country</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Phone" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Website" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Your message"></textarea>
-                        </div>
-                        <div class="form-group term_check">
-                            <input type="checkbox" id="term">
-                            <label for="term">I agree to receive emails, newsletters and promotional
-                                messages</label>
+                            <textarea class="form-control" name="message" placeholder="Your message"></textarea>
                         </div>
                         <div class="form-group mb-0">
-                            <button type="submit" class="btn puprple_btn">SEND MESSAGE</button>
+                            <button type="submit" class="btn puprple_btn" onclick="submitForm('contactForm','post');">SEND
+                                MESSAGE</button>
                         </div>
                     </form>
                 </div>
@@ -82,7 +62,7 @@
                             </div>
                             <div class="text">
                                 <span>Email Us</span>
-                                <a href="mailto:example@gmail.com">example@gmail.com</a>
+                                <a href="mailto:{{ config('global.email') }}">{{ config('global.email') }}</a>
                             </div>
                         </li>
                         <li>
@@ -91,7 +71,7 @@
                             </div>
                             <div class="text">
                                 <span>Call Us</span>
-                                <a href="tel:+1(888)553-46-11">+1 (888) 553-46-11</a>
+                                <a href="tel:{{ config('global.contact_no') }}">{{ config('global.contact_no') }}</a>
                             </div>
                         </li>
                         <li>
@@ -100,7 +80,7 @@
                             </div>
                             <div class="text">
                                 <span>Visit Us</span>
-                                <p>5687, Business Avenue, New York, USA 5687</p>
+                                <p>{{ config('global.company_address') }}</p>
                             </div>
                         </li>
                     </ul>
