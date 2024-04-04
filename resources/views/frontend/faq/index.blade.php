@@ -33,15 +33,15 @@
                 <div class="accordion" id="accordionExample">
                     @foreach ($faqContent as $item)
                         <div class="card" data-aos="fade-up">
-                            <div class="card-header" id="heading{{$item['id']}}">
+                            <div class="card-header" id="heading{{ $item['id'] }}">
                                 <h2 class="mb-0">
                                     <button type="button" class="btn btn-link" data-toggle="collapse"
-                                        data-target="#collapse{{$item['id']}}">
+                                        data-target="#collapse{{ $item['id'] }}">
                                         <i class="icon_faq icofont-plus"></i></i> {{ $item['question'] }}</button>
                                 </h2>
                             </div>
-                            <div id="collapse{{$item['id']}}" class="collapse show" aria-labelledby="heading{{$item['id']}}"
-                                data-parent="#accordionExample">
+                            <div id="collapse{{ $item['id'] }}" class="collapse show"
+                                aria-labelledby="heading{{ $item['id'] }}" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <p>{{ $item['answer'] }}</p>
                                 </div>
@@ -67,16 +67,16 @@
                         <div class="free_text">
                             <div class="section_title">
                                 <h2>Let’s download free from apple and play store</h2>
-                                <p>Unlock the magic of cinema - Download now and embark on an unforgettable journey!    </p>
+                                <p>Unlock the magic of cinema - Download now and embark on an unforgettable journey! </p>
                             </div>
                             <ul class="app_btn">
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ config('global.app_link') }}">
                                         <img src="{{ asset('frontend/images/appstore_blue.png') }}" alt="image">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ config('global.ios_link') }}">
                                         <img src="{{ asset('frontend/images/googleplay_blue.png') }}" alt="image">
                                     </a>
                                 </li>
@@ -87,8 +87,8 @@
                     <!-- images -->
                     <div class="col-md-6">
                         <div class="free_img">
-                            <img src="{{ asset('frontend/images/download-screen01.png') }}" alt="image">
-                            <img class="mobile_mockup" src="{{ asset('frontend/images/download-screen02.png') }}"
+                            <img src="{{ asset('frontend/images/home/carousel/Reward.png') }}" alt="image">
+                            <img class="mobile_mockup" src="{{ asset('frontend/images/home/carousel/Home.png') }}"
                                 alt="image">
                         </div>
                     </div>

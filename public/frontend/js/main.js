@@ -1,3 +1,4 @@
+
 // Open Sub Menu
 $('.drp_btn').click(function(){
   $(this).siblings('.sub_menu').slideToggle();
@@ -351,3 +352,28 @@ $(document).ready(function(){
 
 AOS.init();
 
+// Validation
+function validateNameInput(input) {
+  var regex = /^[A-Za-z\s]+$/;
+  var inputValue = input.value.trim();
+
+  if (!regex.test(inputValue)) {
+      input.value = inputValue.replace(/[^A-Za-z\s]/g, '');
+  }
+}
+
+function validatePhoneInput(input) {
+  var inputValue = input.value.trim();
+        var numericValue = inputValue.replace(/\D/g, ''); // Remove non-numeric characters
+
+        if (numericValue.length !== 10) {
+            input.setCustomValidity("Please enter a 10-digit phone number.");
+        } else {
+            input.setCustomValidity("");
+        }
+
+        input.value = numericValue; // Update input value with numeric-only value
+    
+}
+
+//  TOASTS 

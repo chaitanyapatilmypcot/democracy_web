@@ -2,25 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Config;
 
-class FaqController extends Controller
+
+class FaqPageController extends Controller
 {
-    public function fetchFaq(Request $request) {
-        $uuid = '123456789';
-        $platform = 'web';
+    /**
+     * @param  
+     *
+     *
+     * @return List of Faqs and view page
+     */
+    public function fetchFaqs() {
+        $api_url = Config::get('global.api_url');
+        $uuid = Config::get('global.uuid');
+        $platform = Config::get('global.platform');
         $response = Http::withBasicAuth('admin', 'mypcot')
             ->withHeaders([
                 'UUID' => $uuid,
                 'Platform' => $platform
             ])
-            ->post('http://skyonliners.com/demo/democracy-apis/webservices/v1/faqs/list', [
-                "page" => "1",
-                "paginate" => "10",
-                "order_by"=> "pages",
-                "sort_by"=> "desc"
-            ])
+            ->post($api_url . 'faqs/list')
             ->json();
 
             if($response) {
@@ -30,8 +33,8 @@ class FaqController extends Controller
 
 
                 return view('frontend.faq.index', ['faqContent' => $faqContent, 'tags' => $tags]);
-            }else {
-                return back()->with('error', 'Failed to fetch Faqs');
             }
+
+        return back()->with('error', 'Failed to fetch Faqs');
     }
 }

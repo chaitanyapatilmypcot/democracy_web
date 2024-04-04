@@ -29,20 +29,21 @@
                         <h2>Leave a <span>message</span></h2>
                         <p>Fill up form below, our team will get back soon</p>
                     </div>
-                    <form action="{{ route('contact') }}" method="post" id="contactForm">
+                    <form action="{{ route('contact_us') }}" method="post" id="contactForm">
                         @csrf
                         <div class="form-group">
-                            <input type="text" placeholder="Name" name="name" class="form-control">
+                            <input type="text" placeholder="Name" name="name" class="form-control"
+                                oninput="validateNameInput(this)">
                         </div>
                         <div class="form-group">
-                            <input type="phone" placeholder="Phone" name="phone" class="form-control">
+                            <input type="tel" placeholder="Phone" name="phone" class="form-control"
+                                oninput="validatePhoneInput(this)">
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" name="message" placeholder="Your message"></textarea>
                         </div>
                         <div class="form-group mb-0">
-                            <button type="submit" class="btn puprple_btn" onclick="submitForm('contactForm','post');">SEND
-                                MESSAGE</button>
+                            <button type="submit" class="btn puprple_btn" id="contactBtn">SEND MESSAGE</button>
                         </div>
                     </form>
                 </div>
@@ -59,21 +60,23 @@
                     <ul class="contact_info_list">
                         <li>
                             <div class="img">
-                                <img src="{{ asset('frontend/images/contact/ig.png') }}" alt="image">
+                                <a href="{{ $contact['insta_link'] }}"><img
+                                        src="{{ asset('frontend/images/contact/ig.png') }}" alt="image"></a>
                             </div>
                             <div class="text">
 
                                 <a href="{{ $contact['insta_link'] }}"><span>Explore
-                                        Us</span>{{ $contact['insta_link'] }}</a>
+                                        Us</span></a>
                             </div>
                         </li>
                         <li>
                             <div class="img">
-                                <img src="{{ asset('frontend/images/contact/yt.png') }}" alt="image">
+                                <a href="{{ $contact['yt_link'] }}"><img src="{{ asset('frontend/images/contact/yt.png') }}"
+                                        alt="image"></a>
                             </div>
                             <div class="text">
 
-                                <a href="{{ $contact['yt_link'] }}"><span>Watch Us</span>{{ $contact['yt_link'] }}</a>
+                                <a href="{{ $contact['yt_link'] }}"><span>Watch Us</span></a>
                             </div>
                         </li>
                         <li>

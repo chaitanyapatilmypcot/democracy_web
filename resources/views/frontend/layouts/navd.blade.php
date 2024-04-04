@@ -7,34 +7,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="{{ $tags['keywords'] }}">
+    <link rel="canonical" href="{{ $tags['canonical'] }}" />
+    <meta name="description" content="{{ $tags['description'] }}">
     <title>{{ $tags['title'] }}</title>
-
-    <!-- icofont-css-link -->
     <link rel="stylesheet" href="{{ asset('frontend/css/icofont.min.css') }}">
-    <!-- Owl-Carosal-Style-link -->
     <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
-    <!-- Bootstrap-Style-link -->
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
-    <!-- Aos-Style-link -->
     <link rel="stylesheet" href="{{ asset('frontend/css/aos.css') }}">
-    <!-- Coustome-Style-link -->
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
-    <!-- Responsive-Style-link -->
     <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">
-    <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('frontend/images/nav/logof.png') }}" type="image/x-icon">
-
 </head>
 
 <body>
-
     <!-- Page-wrapper-Start -->
     <div class="page_wrapper">
-
+        <div id="liveToast" class="toast" role="alert" style="z-index: 9999999999999;">
+            <div class="d-flex justify-content-between w-100">
+                <div class="toast-body text-white">
+                    Thank You! We Got Your Query, We Will Contact You Shortly..
+                </div>
+            </div>
+        </div>
         <!-- Preloader -->
         <div id="preloader">
             <div id="loader"></div>
         </div>
+
         {{-- Nav Start --}}
         <!-- Header Start -->
         <header class="white_header">
@@ -43,7 +43,7 @@
                 <!-- navigation bar -->
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="/">
-                        <img src="{{ asset('frontend/images/nav/logo_side.png') }}"  alt="image">
+                        <img src="{{ asset('frontend/images/nav/logo_side.png') }}" alt="image">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -81,7 +81,6 @@
         </header>
         {{-- Nav end --}}
         @yield('content')
-        {{-- Footer Start --}}
         <!-- Footer-Section start -->
         <footer>
             <div class="top_footer" id="contact">
@@ -106,7 +105,7 @@
                             <div class="abt_side">
                                 <div class="logo"> <img src="{{ asset('frontend/images/nav/logo_side.png') }}"
                                         alt="image"></div>
-                                
+
                                 <ul class="social_media">
                                     <li><a href="#"><i class="icofont-facebook"></i></a></li>
                                     <li><a href="#"><i class="icofont-twitter"></i></a></li>
@@ -180,8 +179,8 @@
                             <p>© Copyrights 2024. All rights reserved.</p>
                         </div>
                         <div class="col-md-6">
-                            <p class="developer_text">Design & developed by <a
-                                    href="https://www.mypcot.com/" target="blank">Mypcot Infotech Pvt Ltd</a></p>
+                            <p class="developer_text">Design & developed by <a href="https://www.mypcot.com/"
+                                    target="blank">Mypcot Infotech Pvt Ltd</a></p>
                         </div>
                     </div>
                     <!-- row end -->
@@ -201,19 +200,68 @@
 
     <!-- Jquery-js-Link -->
     <script src="{{ asset('frontend/js/jquery.js') }}"></script>
-    <!-- owl-js-Link -->
     <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
-    <!-- bootstrap-js-Link -->
     <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
-    <!-- aos-js-Link -->
     <script src="{{ asset('frontend/js/aos.js') }}"></script>
-    <!-- main-js-Link -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#contactBtn').click(function(event) {
+                event.preventDefault();
+                var $form = $('#contactForm');
+                var $toast = $('#liveToast');
+                var $toastBody = $toast.find('.toast-body');
+
+                // Disable the button to prevent multiple submissions
+                $(this).prop('disabled', true);
+
+                $.ajax({
+                    url: $form.attr('action'),
+                    type: 'POST',
+                    data: $form.serialize(),
+                    success: function(response) {
+                        var message = '';
+                        var isSuccess = false;
+
+                        if (response.success) {
+                            message = 'Thank You! We Got Your Query';
+                            isSuccess = true;
+                            $form[0].reset(); // Clear form fields
+                        } else if (response.error) {
+                            message = response.error;
+                        } else {
+                            message = response.message.join('\n');
+                        }
+
+                        showNotification(message, isSuccess);
+                    },
+                    error: function(xhr) {
+                        var errorMessage = xhr.responseJSON ? xhr.responseJSON.message :
+                            'Unknown error';
+                        showNotification('Alert: ' + errorMessage, false);
+                    },
+                    complete: function() {
+                        // Re-enable the button after the request completes
+                        $('#contactBtn').prop('disabled', false);
+                    }
+                });
+
+                function showNotification(message, isSuccess) {
+                    var toastClass = isSuccess ? 'bg-success' : 'bg-danger';
+                    $toastBody.text(message);
+                    $toast.removeClass('bg-success bg-danger').addClass(toastClass).toast('show');
+                    $toast.css('display', 'block');
+
+                    setTimeout(function() {
+                        $toast.css('display', 'none');
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+
 
 </body>
-
-
-<!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/apper/all-demo/01-app-landing-page-defoult/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Nov 2022 11:38:24 GMT -->
 
 </html>
 {{-- Footer End --}}

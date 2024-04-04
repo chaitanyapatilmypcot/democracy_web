@@ -227,7 +227,9 @@
     .free_app_section .container .free_app_inner .free_text .section_title h2, .section_title h2 {font-size: 24px;}
 
     /* navbar section */
-    .navbar {padding-top: 15px;}
+    
+    
+    
     .navbar-expand-lg .navbar-nav .has_dropdown .sub_menu ul li a {text-align: left; line-height: 1.5; font-size: 14px;}
 
     /* banner section */

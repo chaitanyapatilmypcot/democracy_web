@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="{{ $tags['keywords'] }}">
+    <link rel="canonical" href="{{ $tags['canonical'] }}" />
+    <meta name="description" content="{{ $tags['description'] }}">
     <title>{{ $tags['title'] }}</title>
 
     <!-- icofont-css-link -->
@@ -26,7 +29,12 @@
 </head>
 
 <body>
-    {{-- Navbar Start --}}
+    {{-- Loader --}}
+    <div class="loader-overlay" style="display: none;">
+        <div class="loader mx-auto "></div>
+    </div>
+
+
     <!-- Page-wrapper-Start -->
     <div class="page_wrapper">
 
@@ -124,9 +132,6 @@
                                 <h3>Useful Links</h3>
                                 <ul>
                                     <li><a href="/">Home</a></li>
-                                    {{-- <li><a href="#">About us</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Blog</a></li> --}}
                                     <li><a href="terms">Terms & conditions</a></li>
                                     <li><a href="privacy">Privacy policy</a></li>
                                 </ul>
@@ -139,8 +144,6 @@
                                 <h3>Help & Suport</h3>
                                 <ul>
                                     <li><a href="faq">FAQ's</a></li>
-                                    {{-- <li><a href="#">Support</a></li>
-                                <li><a href="#">How it works</a></li> --}}
                                     <li><a href="contact">Contact us</a></li>
                                 </ul>
                             </div>
@@ -152,13 +155,13 @@
                                 <h3>Let’s Try Out</h3>
                                 <ul class="app_btn">
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ config('global.app_link') }}">
                                             <img src="{{ asset('frontend/images/appstore_blue.png') }}"
                                                 alt="image">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{ config('global.ios_link') }}">
                                             <img src="{{ asset('frontend/images/googleplay_blue.png') }}"
                                                 alt="image">
                                         </a>
@@ -224,18 +227,11 @@
 
     </div>
     <!-- Page-wrapper-End -->
-
-    <!-- Jquery-js-Link -->
     <script src="{{ asset('frontend/js/jquery.js') }}"></script>
-    <!-- owl-js-Link -->
     <script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>
-    <!-- bootstrap-js-Link -->
     <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
-    <!-- aos-js-Link -->
     <script src="{{ asset('frontend/js/aos.js') }}"></script>
-    <!-- main-js-Link -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
-
 </body>
 
 </html>

@@ -2183,6 +2183,9 @@ footer .top_footer .anim_line span:nth-child(2) {
 
 .about_app_section .about_img .screen_img img {
     animation-delay: 3s;
+    box-shadow: 2px 4px 15px var(--light-purple);
+    border-radius: 20px;
+    height: 45vh;
 }
 
 .modern_ui_section .ui_images .right_img img:nth-child(3) {
@@ -3499,3 +3502,24 @@ header.fix_style.white_header {
     margin-top: 2px;
     border-radius: 25px;
 } */
+
+/* Toasts */
+
+#liveToast {
+    display: none;
+    margin-top: 5%;
+    margin-right: 2%;
+    max-width: fit-content;
+    background-color: white;
+    color: black; /* Changed to black for better visibility */
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 1.6s;
+}
+@media (max-width: 767px) {
+    #liveToast {
+        margin-top: 15%; /* Adjust this value as per your requirement */
+    }
+}

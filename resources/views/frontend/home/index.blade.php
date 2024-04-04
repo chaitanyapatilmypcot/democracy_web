@@ -31,14 +31,15 @@
                     <!-- app buttons -->
                     <ul class="app_btn">
                         <li>
-                            <a href="{{config('global.app_link')}}">
-                                <img class="blue_img" src="{{ asset('frontend/images/appstore_blue.png') }}" alt="image">
+                            <a href="{{ config('global.app_link') }}">
+                                <img class="blue_img" src="{{ asset('frontend/images/appstore_blue.png') }}"
+                                    alt="image">
                                 <img class="white_img" src="{{ asset('frontend/images/appstore_white.png') }}"
                                     alt="image">
                             </a>
                         </li>
                         <li>
-                            <a href="{{config('global.ios_link')}}">
+                            <a href="{{ config('global.ios_link') }}">
                                 <img class="blue_img" src="{{ asset('frontend/images/googleplay_blue.png') }}"
                                     alt="image">
                                 <img class="white_img" src="{{ asset('frontend/images/googleplay_white.png') }}"
@@ -204,8 +205,8 @@
                             <img class="moving_position_animatin" src="{{ asset('frontend/images/home/contest.png') }}"
                                 alt="image">
                         </div>
-                        <div class="screen_img">
-                            <img class="moving_animation" src="{{ asset('frontend/images/about-screen.png') }}"
+                        <div class="screen_img rounded">
+                            <img class="moving_animation" src="{{ asset('frontend/images/something.png') }}"
                                 alt="image">
                         </div>
                     </div>
@@ -267,8 +268,9 @@
                             </li>
                         </ul>
                         <!-- UL end -->
-                        <a href="{{config('global.app_link')}}
-                        " class="btn puprple_btn" data-aos="fade-in" data-aos-duration="1500">DOWNLOAD NOW</a>
+                        <a href="{{ config('global.app_link') }}
+                        " class="btn puprple_btn"
+                            data-aos="fade-in" data-aos-duration="1500">DOWNLOAD NOW</a>
                     </div>
                 </div>
             </div>
@@ -364,15 +366,15 @@
 
                     @foreach ($faqContent as $item)
                         <div class="card" data-aos="fade-up" data-aos-duration="1500">
-                            <div class="card-header" id="heading{{ $item['id']}}">
+                            <div class="card-header" id="heading{{ $item['id'] }}">
                                 <h2 class="mb-0">
                                     <button type="button" class="btn btn-link active" data-toggle="collapse"
-                                        data-target="#collapse{{ $item['id']}}">
-                                        <i class="icon_faq icofont-plus"></i></i> {{$item['question']}}</button>
+                                        data-target="#collapse{{ $item['id'] }}">
+                                        <i class="icon_faq icofont-plus"></i></i> {{ $item['question'] }}</button>
                                 </h2>
                             </div>
-                            <div id="collapse{{ $item['id']}}" class="collapse show" aria-labelledby="heading{{ $item['id']}}"
-                                data-parent="#accordionExample">
+                            <div id="collapse{{ $item['id'] }}" class="collapse show"
+                                aria-labelledby="heading{{ $item['id'] }}" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <p>{{ $item['answer'] }}</p>
                                 </div>
@@ -432,7 +434,7 @@
                             <img src="{{ asset('frontend/images/home/carousel/6.png') }}" alt="image">
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <!-- screen slider end -->
@@ -469,12 +471,12 @@
                             </div>
                             <ul class="app_btn">
                                 <li>
-                                    <a href="{{config('global.app_link')}}">
+                                    <a href="{{ config('global.app_link') }}">
                                         <img src="{{ asset('frontend/images/appstore_blue.png') }}" alt="image">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{config('global.ios_link')}}">
+                                    <a href="{{ config('global.ios_link') }}">
                                         <img src="{{ asset('frontend/images/googleplay_blue.png') }}" alt="image">
                                     </a>
                                 </li>

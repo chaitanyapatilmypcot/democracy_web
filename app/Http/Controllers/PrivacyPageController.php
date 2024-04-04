@@ -4,33 +4,38 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Config;
 
-class PrivacyController extends Controller
+class PrivacyPageController extends Controller
 {
 
-    public function fetchPrivacy(Request $request)
+    public function fetchPrivacy()
     {
-
-        $uuid = '134657985';
-        $platform = 'web';
+        /**
+         * @param  
+         *
+         *
+         * @return List of Privacy Policy and view page
+         */
+        $api_url =Config::get('global.api_url');
+        $uuid = Config::get('global.uuid');
+        $platform = Config::get('global.platform');
         $response = Http::withBasicAuth('admin', 'mypcot')
             ->withHeaders([
                 'UUID' => $uuid,
                 'Platform' => $platform
             ])
-            ->post('http://skyonliners.com/demo/democracy-apis/webservices/v1/policies', [
+            ->post( $api_url .'policies', [
                 'type' => 'policy'
             ])
             ->json();
-            // print_r($response);exit;
-
         if ($response) {
             $data = $response;
             $privacyContent = $data['data']['result']['content'];
             $tags = config('global.meta_tags')['privacy_policy'];
 
 
-            return view('frontend.privacy', ['privacyContent' => $privacyContent, 'tags' => $tags]);
+            return view('frontend.privacyPolicy.privacy', ['privacyContent' => $privacyContent, 'tags' => $tags]);
         } else {
             return back()->with('error', 'Failed to fetch privacy policy.');
         }

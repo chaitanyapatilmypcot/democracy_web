@@ -1,12 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\FaqController;
-use App\Http\Controllers\PrivacyController;
-use App\Http\Controllers\TermsController;
-
+use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\ContactUsPageController;
+use App\Http\Controllers\FaqPageController;
+use App\Http\Controllers\PrivacyPageController;
+use App\Http\Controllers\TermsPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,20 +17,17 @@ use App\Http\Controllers\TermsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
-
-Route::get('/', [HomeController::class, 'fetchHome']);
+Route::get('/', [HomePageController::class, 'fetchHomeFaq']);
 
 // Contact Us
-Route::get('contact',[ContactUsController::class, 'index']);
-Route::post('contact', [ContactUsController::class, 'storeContactForm'])->name('contact');
+Route::get('contact',[ContactUsPageController::class, 'index']);
+Route::post('contact_us', [ContactUsPageController::class, 'storeContactForm'])->name('contact_us');
 
 // Faq
-Route::get('faq', [FaqController::class, 'fetchFaq']);
+Route::get('faq', [FaqPageController::class, 'fetchFaqs']);
 
 // Privacy Page
-Route::get('privacy', [PrivacyController::class, 'fetchPrivacy']);
+Route::get('privacy', [PrivacyPageController::class, 'fetchPrivacy']);
 
 // Terms Page
-Route::get('terms', [TermsController::class, 'fetchTerms']);
+Route::get('terms', [TermsPageController::class, 'fetchTerms']);

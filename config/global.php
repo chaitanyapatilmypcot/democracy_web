@@ -11,6 +11,9 @@ return [
 	'EMAIL_FROM_NAME' => env('MAIL_FROM_NAME', 'Singh Arjun'),
 	'EMAIL_TO' => ['ritesh.s.mypcot@gmail.com', 'ankita.s@mypcot.com', 'chhotelal.s@mypcot.com'],
 	'base_path' => env('BASE_URL'),
+	'api_url' => env('API_URL'),
+	'uuid' => '123456789',
+	'platform' => 'web', 
 	'meta_tags' => [
 		"home" => [
 			"canonical" => env('BASE_URL'),
